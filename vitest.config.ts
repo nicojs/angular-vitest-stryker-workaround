@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitest/config';
+import { VERSION } from '@angular/cli';
 
 export default defineConfig({
   test: {
@@ -18,8 +19,7 @@ export default defineConfig({
           sequence: {
             setupFiles: 'list',
           },
-          root: '.angular/cache/21.0.4/ng-stryker/unit-test/output-files',
-          name: 'ng-stryker',
+          root: `.angular/cache/${VERSION.full}/ng-stryker/unit-test/output-files`,
           include: ['spec-app-app.js'],
           environment: 'jsdom',
         },
